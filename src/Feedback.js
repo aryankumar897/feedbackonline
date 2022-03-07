@@ -33,6 +33,9 @@ const Feedback = () => {
         axios({
             method: 'POST',
             url: `${REACT_APP_API}/feedback`,
+            headers: {
+                'Content-Type': 'application/json',
+              },
             data: { name, email, phone, message, uploadedFiles }
         })
             .then(response => {
