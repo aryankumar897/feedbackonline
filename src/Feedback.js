@@ -29,7 +29,7 @@ const Feedback = () => {
         event.preventDefault();
         setValues({ ...values, buttonText: '...sending' });
         // send to backend for email
-        // console.table({ name, email, phone, message, uploadedFiles });
+       // console.table({ name, email, phone, message, uploadedFiles });
         axios({
             method: 'POST',
             url: `${REACT_APP_API}/feedback`,
