@@ -30,13 +30,12 @@ const Feedback = () => {
         setValues({ ...values, buttonText: '...sending' });
         // send to backend for email
        // console.table({ name, email, phone, message, uploadedFiles });
-        axios({
-            method: 'POST',
-            url: `${REACT_APP_API}/feedback`,
-            headers: {
-                'Content-Type': 'application/json',
-              },
-            data: { name, email, phone, message, uploadedFiles }
+        axios.post(`${REACT_APP_API}/feedback`, {
+            name,
+             email,
+              phone,
+               message,
+                uploadedFiles 
         })
             .then(response => {
                 // console.log('feedback submit response', response);
